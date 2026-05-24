@@ -1,0 +1,108 @@
+/* //Steps
+    if (isEditing === title.id) {
+      const wrapper = document.createElement("div");
+      wrapper.classList.add("wrapper");
+
+      const editingInput = document.createElement("input");
+      editingInput.classList.add("edit-card-input");
+      editingInput.placeholder = "Edit title...";
+
+      const saveBtn = document.createElement("button");
+      saveBtn.classList.add("save-btn");
+      saveBtn.textContent = "Save";
+
+      const cancelBtn = document.createElement("button");
+      cancelBtn.classList.add("cancel-btn");
+      cancelBtn.textContent = "Cancel";
+
+      const btnGroup = document.createElement("div");
+      btnGroup.classList.add("btn-group");
+
+      btnGroup.appendChild(saveBtn);
+      btnGroup.appendChild(cancelBtn);
+
+      wrapper.appendChild(editingInput);
+      wrapper.appendChild(btnGroup);
+
+      cardContainer.appendChild(wrapper);
+
+      saveBtn.onclick = () => {
+        try {
+          const newTitle = {
+            title: editingInput.value,
+          };
+
+          cardTitles = EditSideBarCard(cardTitles, title.id, newTitle);
+
+          renderCardDetails();
+          api.setTitles();
+          isEditing = null;
+        } catch (err) {
+          console.err("Title not edited successfully");
+        } finally {
+          renderCardDetails();
+        }
+      };
+
+      cancelBtn.onclick = () => {
+        isEditing = null;
+        renderCardDetails();
+      };
+    } else {
+      // Normal display mode
+      const span = document.createElement("span");
+      span.textContent = title.title;
+
+      const editBtn = document.createElement("button");
+      editBtn.textContent = "✏️";
+
+      editBtn.onclick = () => {
+        editingId = title.id;
+        renderCardDetails();
+      };
+
+      li.appendChild(span);
+      li.appendChild(editBtn);
+    } */
+
+/* //Allow dragging of cards and set the dragged card id to the current card's id
+    li.onmousedown = () => {
+      draggedCardId = title.id;
+      li.classList.add("dragging");
+      console.log("drag start");
+    };
+
+    //When mouse is released, reset the dragged card id and remove dragging class
+    li.onmouseup = () => {
+      draggedCardId = null;
+      li.classList.remove("dragging");
+      console.log("drag end");
+    }; */
+
+/* //Drag and drop feature for cardContainer and columnContainer
+
+cardContainer.addEventListener("dragover", (e) => {
+  e.preventDefault();
+}); */
+
+/* //You already handled it correctly with .forEach. */
+/* columnContainer.addEventListener("dragover", (e) => {
+  e.preventDefault();
+}); */
+#filter-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5px;
+  color: #fffaf0;
+  cursor: pointer;
+}
+
+.parent .box1 .box1-subcontainer .box1-subSubContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}

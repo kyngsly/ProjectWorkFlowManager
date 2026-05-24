@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" type="image/svg+xml" href="/assets/trello.svg" />
+    <title>My Project Board</title>
+  </head>
+  <body>
+    <nav class="navbar-container">
+      <div class="firstIcon-container">
+        <img src="/assets/trello.svg" alt="Trello logo" class="logo" />
+        <span>Project Board</span>
+      </div>
+      <div class="searchbar-container">
+        <div class="searchbar-subcontainer">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search" />
+        </div>
+        <button>Create</button>
+      </div>
+      <div class="secondIcon-container">
+        <button>15 days left</button>
+        <ul class="subIcons-container">
+          <i data-lucide="megaphone"></i>
+          <i data-lucide="bell"></i>
+          <i data-lucide="circle-help"></i>
+        </ul>
+        <span>KC</span>
+      </div>
+    </nav>
+
+    <main class="parent">
+      <!-- -----------Side bar section ----------------->
+      <aside class="box1">
+        <ul class="box1-subcontainer">
+          <li class="box1-firstSubContainer">
+            <i data-lucide="inbox"></i>
+            <span>Inbox</span>
+          </li>
+          <div class="box1-subSubContainer">
+            <!-- Filter section -->
+            <div id="filter-icon" class="filter-icon">
+              <i data-lucide="list-filter"></i>
+            </div>
+            <section id="filter-section" class="filter-section hide">
+              <p>Filter-input-section</p>
+              <p>Filter-check-box-section 1</p>
+              <p>Filter-check-box-section 2</p>
+            </section>
+            <!-- More section -->
+            <div class="sidebar-more-icon">
+              <i data-lucide="more-horizontal"></i>
+            </div>
+            <section class="sidebar-more-section hide">
+              <p>More-input-section-second-icon</p>
+              <p>More-check-box-section 1-second-icon</p>
+              <p>More-check-box-section 2-second-icon</p>
+            </section>
+          </div>
+        </ul>
+        <button id="addCardBtn">Add a card</button>
+        <div class="cards"></div>
+      </aside>
+      <!-- -----------Side bar section stop ----------------->
+      <section class="box2">
+        <header class="header-container">
+          <div class="left-container">
+            <h3 class="projectHeader-three">Project board</h3>
+            <div id="chevron-icon">
+              <i data-lucide="chevron-down"></i>
+            </div>
+            <section id="chevron-section" class="chevron-section hide">
+              <p>chevron-section-second-icon</p>
+              <p>chevron-check-box-section 1-second-icon</p>
+              <p>chevron-check-box-section 2-second-icon</p>
+            </section>
+          </div>
+          <!-- ------------Right container with icons and sections------------------- -->
+          <div class="right-container">
+            <div class="secondIcon-container">
+              <span>KC</span>
+            </div>
+
+            <div id="plug-icon">
+              <i data-lucide="plug"></i>
+            </div>
+            <section id="plug-section" class="plug-section hide">
+              <p>chevron-section-second-icon</p>
+              <p>chevron-check-box-section 1-second-icon</p>
+              <p>chevron-check-box-section 2-second-icon</p>
+            </section>
+
+            <div id="icon-zap">
+              <i data-lucide="zap"></i>
+            </div>
+            <section id="zap-section" class="zap-section hide">
+              <p>chevron-section-second-icon</p>
+              <p>chevron-check-box-section 1-second-icon</p>
+              <p>chevron-check-box-section 2-second-icon</p>
+            </section>
+
+            <div id="filter-icon" class="filter-icon">
+              <i data-lucide="list-filter"></i>
+            </div>
+            <section id="filter-section" class="filter-section hide">
+              <p>chevron-section-second-icon</p>
+              <p>chevron-check-box-section 1-second-icon</p>
+              <p>chevron-check-box-section 2-second-icon</p>
+            </section>
+
+            <div id="star-icon">
+              <i data-lucide="star"></i>
+            </div>
+            <section id="star-section" class="star-section hide">
+              <p>chevron-section-second-icon</p>
+              <p>chevron-check-box-section 1-second-icon</p>
+              <p>chevron-check-box-section 2-second-icon</p>
+            </section>
+
+            <div id="icon-users">
+              <i data-lucide="users"></i>
+            </div>
+            <section id="users-section" class="users-section hide">
+              <p>chevron-section-second-icon</p>
+              <p>chevron-check-box-section 1-second-icon</p>
+              <p>chevron-check-box-section 2-second-icon</p>
+            </section>
+            <button class="share-btn">
+              <i data-lucide="user-plus"></i>
+              Share
+            </button>
+            <div class="icon-more-horizontal">
+              <i data-lucide="more-horizontal"></i>
+            </div>
+            <section class="more-section hide">
+              <p>chevron-section-second-icon</p>
+              <p>chevron-check-box-section 1-second-icon</p>
+              <p>chevron-check-box-section 2-second-icon</p>
+            </section>
+          </div>
+        </header>
+        <!-- --------------------------Header stopped here------------------------ -->
+
+        <section class="columns-section">
+          <div class="column">
+            <div class="cardHeader-container">
+              <h3 class="current-task">Today</h3>
+              <div class="column-more-icon">
+                <i data-lucide="more-horizontal"></i>
+              </div>
+            </div>
+            <section class="column-more-section hide">
+              <p>More section One</p>
+              <p>More section Two</p>
+              <p>More section Three</p>
+            </section>
+            <!-- giving each column a name to make them independent of each other-->
+            <div class="task" data-column="today"></div>
+          </div>
+          <div class="column">
+            <div class="cardHeader-container">
+              <h3 class="current-task">This Week</h3>
+              <div class="column-more-icon">
+                <i data-lucide="more-horizontal"></i>
+              </div>
+            </div>
+            <section class="column-more-section hide">
+              <p>More section One</p>
+              <p>More section Two</p>
+              <p>More section Three</p>
+            </section>
+            <!-- giving each column a name to make them independent of each other-->
+            <div class="task" data-column="week"></div>
+          </div>
+          <div class="column">
+            <div class="cardHeader-container">
+              <h3 class="current-task">Later</h3>
+              <div class="column-more-icon">
+                <i data-lucide="more-horizontal"></i>
+              </div>
+            </div>
+            <section class="column-more-section hide">
+              <p>More section One</p>
+              <p>More section Two</p>
+              <p>More section Three</p>
+            </section>
+            <!-- giving each column a name to make them independent of each other -->
+            <div class="task" data-column="later"></div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script type="module" src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="/JS/sideBar.js"></script>
+  </body>
+</html>
+
+<!-- Note use class selector for many HTML and id for one unique HTML with id -->
