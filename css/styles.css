@@ -177,7 +177,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   background-color: #132239;
-  min-height: 11%;
+  height: 63.4842px;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
   padding: 1rem;
@@ -409,7 +409,7 @@ body {
   align-items: center;
   padding: 0 0.9rem;
   background: #433368;
-  min-height: 12.4%;
+  height: 63.4842px;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
   text-align: center;

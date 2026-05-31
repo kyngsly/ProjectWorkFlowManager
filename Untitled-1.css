@@ -106,3 +106,46 @@ cardContainer.addEventListener("dragover", (e) => {
   align-items: center;
   position: relative;
 }
+
+/* //Edit card domain function but i dont need it anymore
+function editSideBarCard(currentCard, id, updatedField) {
+  //verifying source of truth proxy
+  verifyArray(currentCard);
+
+  //Throw error check for id
+  if (!id) throw new EditWithoutIdError();
+
+  //Throw error check for missing field
+  if (!updatedField || updatedField.title.trim() === "")
+    throw new Error("No updated data provided");
+
+  return currentCard.map((cardTitle) =>
+    cardTitle.id === id ? { ...cardTitle, ...updatedField } : cardTitle,
+  );
+} */
+
+/* //Define the custom error for editNote function
+class EditWithoutIdError extends Error {
+  constructor() {
+    super("Tried to edit with no note selected");
+  }
+} */
+
+/* //handling click outside function here
+function globalClickOutside(event) {
+  //Handling filter section click on and outside the icon
+  //If the closest thing we have to the target element has the id: filter-section then do nothing
+  if (event.target.closest("#filter-section")) {
+    return;
+  }
+  //Otherwise hide the filter section popover
+  filterSection.classList.add("hide");
+
+  //Handling chevron section when clicked in and outside it
+  if (event.target.closest("#chevron-section")) {
+    return;
+  }
+  //Otherwise hide the chevron section popover
+  chevronSection.classList.add("hide");
+}
+ */
