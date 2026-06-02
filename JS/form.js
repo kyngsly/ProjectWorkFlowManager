@@ -66,7 +66,7 @@ form.addEventListener("submit", (e) => {
     }
 
     errorMessage.style.display = "none";
-    window.location.href = "../boardLayout.html"; // Redirect to board page on successful login
+    window.location.href = "./boardLayout.html"; // Redirect to board page on successful login
     console.log("Welcome to Board");
   }
 });
